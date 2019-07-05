@@ -47,7 +47,8 @@ def get_objects(map_, val):
             if val in row]
 
 
-system = System()
-light = Light((30, 20))
-adapter = MappingAdapter(light)
-system.get_lightening(adapter)
+if __name__ == '__main__':
+    system = System()
+    light = Light((len(system.grid), len(system.grid)))
+    adapter = MappingAdapter(light)
+    system.get_lightening(adapter)
